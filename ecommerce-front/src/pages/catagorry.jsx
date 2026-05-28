@@ -2,6 +2,7 @@ import { FaTshirt } from "react-icons/fa";
 import { GiConverseShoe, GiHoodie } from "react-icons/gi";
 
 export default function Categories() {
+const BASE_URL = import.meta.env.VITE_API_URL;
 
     const categories = [
         {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { FaShoppingCart } from "react-icons/fa"
 
 const CartItems = () => {
+    const BASE_URL = import.meta.env.VITE_API_URL;
     const [msg,setMsg] = useState(null)
     const [cart, setCart] = useState(null)
     const [loading, setLoading] = useState(true)

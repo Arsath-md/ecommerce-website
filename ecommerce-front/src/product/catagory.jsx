@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { FaArrowLeft } from "react-icons/fa";
 
 export default function Catalog() {
+const BASE_URL = import.meta.env.VITE_API_URL;
 
     const { id } = useParams();
 

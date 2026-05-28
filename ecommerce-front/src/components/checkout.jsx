@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 const Checkout = () => {
     const navi = useNavigate();
+const BASE_URL = import.meta.env.VITE_API_URL;
 
     const [address, setAddress] = useState("")
     const [paymentmethod, setPaymentmethod] = useState("COD")

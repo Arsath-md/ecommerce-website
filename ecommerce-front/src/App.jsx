@@ -17,6 +17,8 @@ import AdminProtected from './admin/adminprotected'
 import BillPage from './components/bill'
 
 function App() {
+  const BASE_URL = import.meta.env.VITE_API_URL;
+
 
   return(
     <>

@@ -10,7 +10,7 @@ export default function Views() {
 
         try {
 
-            await fetch(`http://localhost:5000/product/${id}`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/product/${id}`, {
                 method: "DELETE"
             })
 

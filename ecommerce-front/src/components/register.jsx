@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer , toast } from "react-toastify";
 
 export default function Register() {
+const BASE_URL = import.meta.env.VITE_API_URL;
 
     const [data, setData] = useState({
         email: "",

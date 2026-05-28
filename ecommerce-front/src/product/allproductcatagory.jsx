@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
 export default function Allproducts() {
+const BASE_URL = import.meta.env.VITE_API_URL;
 
     const [collects, setCollects] = useState([]);
     const [loadingId, setLoadingId] = useState(null);

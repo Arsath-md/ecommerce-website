@@ -9,6 +9,8 @@ import {
 import { useCart } from "../cartcontext";
 
 export default function Nav() {
+    const BASE_URL = import.meta.env.VITE_API_URL;
+
     const [menuOpen, setMenuOpen] = useState(false);
     const [cart, setCart] = useState(false);
     const [additem, setAdditem] = useState([]);

@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function BillPage() {
+  const BASE_URL = import.meta.env.VITE_API_URL;
+
   const navi = useNavigate()
   const [orders, setOrders] = useState(null);
   const printRef = useRef();

@@ -58,7 +58,7 @@ export default function Adds() {
         try {
 
             const responses = await axios.post(
-                "http://localhost:5000/addproduct",
+                `${import.meta.env.VITE_API_URL}/addproduct`,
                 formdata
             )
 

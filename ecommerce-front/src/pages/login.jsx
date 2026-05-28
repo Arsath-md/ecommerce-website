@@ -4,6 +4,8 @@ import { ToastContainer , toast } from "react-toastify";
 
 
 export default function Login() {
+    const BASE_URL = import.meta.env.VITE_API_URL;
+
     const navi = useNavigate();
 
     const [data, setData] = useState({

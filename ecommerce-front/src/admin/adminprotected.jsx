@@ -12,7 +12,7 @@ export default function AdminProtected({ children }) {
             try {
 
                 const res = await fetch(
-                    "http://localhost:5000/admincheck",
+                    `${import.meta.env.VITE_API_URL}/admincheck`,
                     {
                         credentials: "include"
                     }

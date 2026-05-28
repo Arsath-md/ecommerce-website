@@ -8,6 +8,8 @@ import Allproducts from "../product/allproductcatagory";
 import Features from "../product/features";
 
 export default function Home() {
+    const BASE_URL = import.meta.env.VITE_API_URL;
+
     const [offers, setOffers] = useState([]);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [index, setIndex] = useState(0);

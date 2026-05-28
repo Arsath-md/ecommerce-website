@@ -4,6 +4,8 @@ import { ToastContainer, toast } from "react-toastify"
 import { useCart } from "../cartcontext"
 
 export default function Productcard() {
+    const BASE_URL = import.meta.env.VITE_API_URL;
+
     const {fetchCart} = useCart();
     const [products, setProducts] = useState([])
     const [selectedProduct, setSelectedProduct] = useState(null)

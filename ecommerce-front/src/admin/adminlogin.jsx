@@ -25,7 +25,7 @@ export default function Adminlogin() {
 
         e.preventDefault();
 
-        const datam = await fetch("http://localhost:5000/adminverify", {
+        const datam = await fetch(`${import.meta.env.VITE_API_URL}/adminverify`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
