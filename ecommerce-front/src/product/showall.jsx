@@ -37,7 +37,8 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 
             const res = await axios.get(
                 `${BASE_URL}/getcart`, {
-    credentials: "include"}
+                    withCredentials:true
+                }
             )
 
             setProducts(res.data)

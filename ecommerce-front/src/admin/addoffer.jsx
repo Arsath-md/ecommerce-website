@@ -23,7 +23,9 @@ const AddOffer = () => {
 
       const response = await axios.post(
         "http://localhost:5000/addoffer",
-        formData,
+        formData,{
+          withCredentials:true
+        },
         {
           headers: {
             "Content-Type": "multipart/form-data",

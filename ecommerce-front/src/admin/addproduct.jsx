@@ -59,7 +59,9 @@ export default function Adds() {
 
             const responses = await axios.post(
                 `${import.meta.env.VITE_API_URL}/addproduct`,
-                formdata
+                formdata,{
+                    withCredentials:true
+                }
             )
 
             if (responses.status === 200) {

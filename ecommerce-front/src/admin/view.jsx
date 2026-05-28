@@ -11,7 +11,8 @@ export default function Views() {
         try {
 
             await fetch(`${import.meta.env.VITE_API_URL}/product/${id}`, {
-                method: "DELETE"
+                method: "DELETE",
+                credentials:"include"
             })
 
             setProducts(products.filter((item) => item._id !== id))
@@ -31,7 +32,9 @@ export default function Views() {
 
             try {
 
-                const data = await fetch("http://localhost:5000/product")
+                const data = await fetch("http://localhost:5000/product",{
+                    credentials:"include"
+                })
 
                 const datum = await data.json()
 
