@@ -28,4 +28,4 @@ app.use("/",routers);
 
 const PORT = process.env.PORT || 5000
 
-app.listen(5000,()=>{ console.log(`port is running in 000`)})
+app.listen(PORT,()=>{ console.log(`port is running in 000`)})
