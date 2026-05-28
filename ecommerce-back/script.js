@@ -11,7 +11,7 @@ app.use(cors({
     credentials: true
 }));
 
-moongo.connect("mongodb://localhost:27017/ecommerce")
+moongo.connect("mongodb+srv://vippismart_db_user:QH0arsdNuQ1otaGI@cluster0.g5fywdi.mongodb.net//ecommerce?retryWrites=true&w=majority")
 .then(
     ()=>{ console.log("connected mongo db")}
 )
@@ -28,4 +28,4 @@ app.use("/",routers);
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT,()=>{ console.log(`port is running in 000`)})
+app.listen(PORT,()=>{ console.log(`port is running in ${PORT}`)})
