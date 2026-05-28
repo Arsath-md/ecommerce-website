@@ -7,7 +7,8 @@ import { useNavigate } from "react-router-dom"
 const Showall = () => {
 
     const navigate = useNavigate()
-const BASE_URL = import.meta.env.VITE_API_URL;
+
+    const BASE_URL = import.meta.env.VITE_API_URL
 
     const [products, setProducts] = useState([])
     const [filtered, setFiltered] = useState([])
@@ -36,24 +37,33 @@ const BASE_URL = import.meta.env.VITE_API_URL;
         try {
 
             const res = await axios.get(
-                `${BASE_URL}/getcart`, {
-                    withCredentials:true
+                `${BASE_URL}/getcart`,
+                {
+                    withCredentials: true
                 }
             )
 
-            setProducts(res.data)
+            console.log("FULL RESPONSE :", res.data)
 
-            setFiltered(res.data)
+            // SAFE ARRAY EXTRACTION
+            const productData =
+                Array.isArray(res.data)
+                    ? res.data
+                    : res.data.products ||
+                      res.data.data ||
+                      []
 
-            
+            console.log("PRODUCT DATA :", productData)
+
+            setProducts(productData)
+
+            setFiltered(productData)
 
         } catch (error) {
 
             console.log(error)
 
-            toast.error(
-                "Failed to load products"
-            )
+            toast.error("Failed to load products")
 
         } finally {
 
@@ -74,28 +84,25 @@ const BASE_URL = import.meta.env.VITE_API_URL;
         }
 
         const filteredData = products.filter(
-
             (item) => item.p_type === type
-
         )
 
         setFiltered(filteredData)
-
 
     }
 
     // ADD TO CART
     const sendData = async (id) => {
 
-        // PREVENT SPAM CLICK
         if (loadingId === id) return
 
         try {
 
             setLoadingId(id)
 
-            const response = await   fetch(`${BASE_URL}/addcart`, {
-
+            const response = await fetch(
+                `${BASE_URL}/addcart`,
+                {
                     method: "POST",
 
                     headers: {
@@ -115,7 +122,6 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 
             console.log(datum)
 
-            // SUCCESS
             if (datum.status) {
 
                 toast.success("Added to cart")
@@ -191,7 +197,7 @@ const BASE_URL = import.meta.env.VITE_API_URL;
                 >
 
                     {
-                        filters?.map((item, index) => (
+                        filters.map((item, index) => (
 
                             <button
                                 key={index}
@@ -250,7 +256,8 @@ const BASE_URL = import.meta.env.VITE_API_URL;
                         >
 
                             {
-                                filtered?.map((product) => (
+                                Array.isArray(filtered) &&
+                                filtered.map((product) => (
 
                                     <div
                                         key={product._id}
