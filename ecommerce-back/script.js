@@ -1,4 +1,7 @@
 const express = require("express")
+const dotenv = require("dotenv")
+dotenv.config()
+
 const app = express();
 const moongo = require("mongoose")
 const parser = require("cookie-parser")
@@ -7,11 +10,11 @@ const cors = require("cors")
 app.use(express.json());
 app.use(parser())
 app.use(cors({
-    origin: "https://ecommerce-website-7662.onrender.com",
+    origin:[ "https://ecommerce-website-7662.onrender.com"],
     credentials: true
 }));
 
-moongo.connect("mongodb+srv://vippismart_db_user:QH0arsdNuQ1otaGI@cluster0.g5fywdi.mongodb.net//ecommerce?retryWrites=true&w=majority")
+moongo.connect(process.env.MONGO)
 .then(
     ()=>{ console.log("connected mongo db")}
 )
