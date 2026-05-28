@@ -37,7 +37,7 @@ const Showall = () => {
         try {
 
             const res = await axios.get(
-                `${BASE_URL}/getcart`,
+                `${BASE_URL}/filter`,
                 {
                     withCredentials: true
                 }
