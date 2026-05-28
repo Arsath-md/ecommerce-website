@@ -35,7 +35,8 @@ const Showall = () => {
         try {
 
             const res = await axios.get(
-                "http://localhost:5000/filter"
+                `${BASE_URL}/getcart`, {
+    credentials: "include"}
             )
 
             setProducts(res.data)
@@ -91,9 +92,8 @@ const Showall = () => {
 
             setLoadingId(id)
 
-            const response = await fetch(
-                "http://localhost:5000/addcart",
-                {
+            const response = await   fetch(`${BASE_URL}/addcart`, {
+
                     method: "POST",
 
                     headers: {

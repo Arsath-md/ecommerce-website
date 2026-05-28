@@ -21,7 +21,8 @@ export default function Productcard() {
 
             try {
 
-                const data = await fetch("http://localhost:5000/product")
+                const data = await   fetch(`${BASE_URL}/product`);
+
 
                 const datum = await data.json()
 
@@ -42,7 +43,8 @@ export default function Productcard() {
 
         try {
 
-            const response = await fetch("http://localhost:5000/addcart", {
+            const response = await   fetch(`${BASE_URL}/addcart`, {
+
 
                 method: "POST",
 

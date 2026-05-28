@@ -25,7 +25,8 @@ export default function Login() {
 
         e.preventDefault();
 
-        const datam = await fetch("http://localhost:5000/log", {
+        const datam = await   fetch(`${BASE_URL}/log`, {
+
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -22,9 +22,8 @@ export default function Catalog() {
 
             try {
 
-                const fetcher = await fetch(
-                    `http://localhost:5000/cat/${id}`
-                );
+                const fetcher = await   fetch(`${BASE_URL}/cat/${id}`);
+
 
                 const res = await fetcher.json();
 
@@ -60,9 +59,8 @@ export default function Catalog() {
 
             setLoadingId(productid);
 
-            const response = await fetch(
-                "http://localhost:5000/addcart",
-                {
+            const response = await   fetch(`${BASE_URL}/addcart`, {
+
                     method: "POST",
 
                     headers: {

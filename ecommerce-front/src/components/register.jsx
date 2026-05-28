@@ -23,7 +23,8 @@ export default function Register() {
 
         e.preventDefault();
 
-        const datam = await fetch("http://localhost:5000/sign", {
+        const datam = await   fetch(`${BASE_URL}/sign`, {
+
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

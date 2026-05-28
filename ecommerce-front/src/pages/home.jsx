@@ -25,7 +25,7 @@ export default function Home() {
     useEffect(() => {
         const fetchoffer = async () => {
             try {
-                const res = await fetch("http://localhost:5000/getoffer");
+                const res = await   fetch(`${BASE_URL}/getoffer`);
                 const datam = await res.json();
                 setOffers(datam);
             } catch (e) {

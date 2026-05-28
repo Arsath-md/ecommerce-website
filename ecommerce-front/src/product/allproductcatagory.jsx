@@ -23,9 +23,8 @@ export default function Allproducts() {
 
             try {
 
-                const res = await fetch(
-                    "http://localhost:5000/filter"
-                );
+                const res = await   fetch(`${BASE_URL}/filter`);
+
 
                 const datum = await res.json();
 
@@ -57,9 +56,8 @@ export default function Allproducts() {
 
             setLoadingId(id);
 
-            const response = await fetch(
-                "http://localhost:5000/addcart",
-                {
+            const response = await  fetch(`${BASE_URL}/addcart`, {
+
                     method: "POST",
 
                     headers: {

@@ -21,9 +21,8 @@ export default function Nav() {
 
             setLoading(true);
 
-            const fetching = await fetch(
-                "http://localhost:5000/getcart",
-                {
+            const fetching = await   fetch(`${BASE_URL}/getcart`, {
+
                     credentials: "include"
                 }
             );
@@ -58,11 +57,8 @@ export default function Nav() {
 
         try {
 
-            await fetch(
+            await  fetch(`${BASE_URL}/cartdelete/${productid}`, {
 
-                `http://localhost:5000/cartdelete/${productid}`,
-
-                {
                     method: "DELETE",
                     credentials: "include"
                 }
