@@ -6,10 +6,11 @@ import Testimonial from "./testimonal";
 import Categories from "./catagorry";
 import Allproducts from "../product/allproductcatagory";
 import Features from "../product/features";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
     const BASE_URL = import.meta.env.VITE_API_URL;
-
+    const navi = useNavigate()
     const [offers, setOffers] = useState([]);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [index, setIndex] = useState(0);
@@ -162,6 +163,7 @@ export default function Home() {
                             sm:w-auto
                             "
                         >
+                            
                             <button
                                 className="
                                 w-full
@@ -178,9 +180,9 @@ export default function Home() {
                                 transition-all
                                 "
                             >
-                                Explore Collection
+                                <a href="#catagory">Explore collections</a>
                             </button>
-
+                            <Link to="/showall">
                             <button
                                 className="
                                 w-full
@@ -200,7 +202,7 @@ export default function Home() {
                                 "
                             >
                                 Shop Now →
-                            </button>
+                            </button></Link>
                         </div>
 
                         {/* STATS */}

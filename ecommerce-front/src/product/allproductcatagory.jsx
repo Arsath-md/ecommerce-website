@@ -107,7 +107,7 @@ const BASE_URL = import.meta.env.VITE_API_URL;
         <div className="min-h-screen bg-black px-4 sm:px-6 md:px-10 py-10">
                 <ToastContainer/>
             {/* MAIN HEADING */}
-            <div className="mb-12">
+            <div className="mb-12" id="catagory">
 
                 <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
                     Premium Collections
