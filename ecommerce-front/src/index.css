@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+.hoodie-image{
+  animation: float 4s ease-in-out infinite;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 18s linear infinite;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-\[-18deg\] {
+  transform: rotateY(-18deg) rotateX(8deg);
+}
+
+.rotate-y-\[-14deg\] {
+  transform: rotateY(-14deg) rotateX(6deg);
+}
+
+.rotate-y-\[-12deg\] {
+  transform: rotateY(-12deg) rotateX(5deg);
+}
+
+.rotate-y-\[-10deg\] {
+  transform: rotateY(-10deg) rotateX(4deg);
+}
