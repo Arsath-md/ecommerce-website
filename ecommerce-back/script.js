@@ -10,7 +10,7 @@ const cors = require("cors")
 app.use(express.json());
 app.use(parser())
 app.use(cors({
-    origin:[ "https://ecommerce-website-7662.onrender.com"],
+    origin:"https://ecommerce-s74m.onrender.com",
     credentials: true
 }));
 
