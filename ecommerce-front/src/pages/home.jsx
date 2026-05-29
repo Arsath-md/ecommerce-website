@@ -240,7 +240,7 @@ export default function Home() {
                                         {text}
                                     </p>
                                     <Link to="/admin">
-                                    admin
+                                    <button>hiiiiii</button>
                                     </Link>
                                 </div>
 
