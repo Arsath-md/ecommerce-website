@@ -37,7 +37,6 @@ const BASE_URL = import.meta.env.VITE_API_URL;
                     "there is an error in allproduct " + e
                 );
 
-                toast.error("Failed to load products");
 
             }
 

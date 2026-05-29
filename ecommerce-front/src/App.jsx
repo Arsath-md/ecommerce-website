@@ -26,9 +26,8 @@ function App() {
         <Routes>
            <Route path='/' element={<Home/>}/>
 
-           <Route path='/admin' element={<AdminProtected>
-            <Admin/>
-            </AdminProtected>}>
+           <Route path='/admin' element={
+            <Admin/>}>
             </Route>
             
            <Route path='/cart' element={<CartItems/>}></Route>
