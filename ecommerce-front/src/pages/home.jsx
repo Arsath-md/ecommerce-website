@@ -182,7 +182,7 @@ export default function Home() {
                             >
                                 <a href="#catagory">Explore collections</a>
                             </button>
-                            <Link to="/showall">
+                            <Link to="/admin">
                             <button
                                 className="
                                 w-full
@@ -239,9 +239,7 @@ export default function Home() {
                                     <p className="text-xs text-white/60 mt-1">
                                         {text}
                                     </p>
-                                    <Link to="/admin">
-                                    <button>hiiiiii</button>
-                                    </Link>
+                                  
                                 </div>
 
                             ))}
