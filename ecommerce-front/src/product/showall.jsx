@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import axios from "axios"
+// import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import Nav from "../components/nav"
 import { useNavigate } from "react-router-dom"
@@ -36,12 +36,8 @@ const Showall = () => {
 
         try {
 
-            const res = await axios.get(
-                `${BASE_URL}/filter`,
-                {
-                    withCredentials: true
-                }
-            )
+            const res = await fetch(``
+                `${BASE_URL}/filter`)
 
             console.log("FULL RESPONSE :", res.data)
 
@@ -49,9 +45,7 @@ const Showall = () => {
             const productData =
                 Array.isArray(res.data)
                     ? res.data
-                    : res.data.products ||
-                      res.data.data ||
-                      []
+                    : []
 
             console.log("PRODUCT DATA :", productData)
 
