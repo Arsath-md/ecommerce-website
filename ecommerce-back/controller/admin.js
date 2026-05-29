@@ -116,7 +116,7 @@ exports.adminverify = async (req, res) => {
 
 exports.admincheck = async(req , res )=>{
      try{
-        const cookie =await req.cookies.tokens;
+        const cookie = req.cookies.tokens;
         if(!cookie){
             return res.status(403).json({msg:false})
         }

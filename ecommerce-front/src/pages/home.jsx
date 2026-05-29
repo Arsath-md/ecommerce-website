@@ -239,6 +239,9 @@ export default function Home() {
                                     <p className="text-xs text-white/60 mt-1">
                                         {text}
                                     </p>
+                                    <Link to="/admin">
+                                    admin
+                                    </Link>
                                 </div>
 
                             ))}
